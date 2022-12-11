@@ -11,10 +11,10 @@
 #define OS_ALT  &sk LALT
 #define OS_CTRL &sk LCTRL
 #define OS_SHFT &sk LSHIFT
-#define COPY &kp LC(c)
-#define PASTE &kp LC(v)
-#define ALL &kp LC(a)
-#define CUT &kp LC(x)
+#define COPY &kp LC(C)
+#define PASTE &kp LC(V)
+#define ALL &kp LC(A)
+#define CUT &kp LC(X)
 
 
 #include <behaviors.dtsi>
