@@ -66,7 +66,7 @@
 		NAV {
             bindings = <
         
-		 [NAV] = LAYOUT(							
+								
 		&kp TAB,&trans,&trans,&trans,&kp K_VOL_UP,             &mo CFG,   &kp HOME,  &kp UP,    &kp END,  &kp DEL,
 		OS_SHFT,OS_CTRL,  OS_ALT,OS_CMD,&kp K_VOL_DN,             &kp CAPS, &kp LEFT,  &kp DOWN,  &kp RGHT, &kp BKSP,
 		ALL,        CUT,   PASTE, COPY, &kp K_PP,                  &trans, &kp PGDN,  &kp PGUP,  SW_LANG,  &kp ENTER,
