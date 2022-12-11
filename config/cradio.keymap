@@ -80,7 +80,7 @@
             bindings = <
         	 							
 		&kp TAB   &trans   &trans   &trans   &kp K_VOL_UP                &mo CFG      &kp HOME     &kp UP       &kp END     &kp DEL   
-		OS_SHFT   OS_CTRL     OS_ALT   OS_CMD   &kp K_VOL_DN                &kp CAPS    &kp LEFT     &kp DOWN     &kp RIGHT    &kp BSCP   
+		OS_SHFT   OS_CTRL     &trans   &trans   &kp K_VOL_DN                &kp CAPS    &kp LEFT     &kp DOWN     &kp RIGHT    &kp BSCP   
 		ALL           CUT      PASTE    COPY    &kp K_PP                     &trans    &kp PGDN     &kp PGUP     SW_LANG     &kp ENTER   
                                  &trans    &trans                &trans    &trans
             >;
@@ -100,7 +100,7 @@
 
         NUM {
             bindings = <
-		&kp KP_N7   &kp KP_N5       &kp KP_N3       &kp KP_N1       &kp KP_N9       &kp KP_N8       &kp KP_N0       &kp KP_N2       &kp KP_N4       &kp KP_N6   
+        &kp KP_N7   &kp KP_N5       &kp KP_N3       &kp KP_N1       &kp KP_N9       &kp KP_N8       &kp KP_N0       &kp KP_N2       &kp KP_N4       &kp KP_N6   
         OS_SHFT    OS_CTRL    OS_ALT     OS_CMD     &kp F11     &kp F10     OS_CMD     OS_ALT     OS_CTRL    OS_SHFT   
         &kp F7      &kp F5      &kp F3      &kp F1      &kp F9      &kp F8      &kp F12     &kp F2      &kp F4      &kp F6   
                                    &trans    &trans    &trans    &trans	
