@@ -35,12 +35,12 @@
             bindings = <&kp>, <&kp>;
         };
 		
+    };
 		&sk {
     release-after-ms = <2000>;
     //quick-release;
     /delete-property/ ignore-modifiers;
 };
-    };
 
     conditional_layers {
         compatible = "zmk,conditional-layers";
