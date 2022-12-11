@@ -20,7 +20,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-	
+#include "keymap_german.h"
 	
 	&sk {
     release-after-ms = <2000>;
@@ -61,18 +61,11 @@
         compatible = "zmk,keymap";
         DEFAULT {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  P       │  U       │  Comp    │  ,       │  Q       │   │  G       │  C       │  L       │  M       │  F       │
-            &kp P      &kp U      &kp E      &kp COMMA   &kp Q          &kp G      &kp C      &kp L      &kp M      &kp F
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  H       │  I       │  E       │  A       │  O       │   │  D       │  T       │  R       │  N       │   S      │
-            &kp H       &kp I      &kp E      &kp A      &kp O          &kp D      &kp T      &kp R      &kp N       &kp S
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  K       │  Y       │  .       │  '       │  X       │   │  J       │  V       │  W       │  B       │   Z      │
-            &kp K      &kp Y      &kp DOT      &kp V      &kp X          &kp N      &kp V     &kp W      &kp B       &kp Z
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &mo NAV    OS_SHFT         &kp SPACE  &mo SYM
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+		DE_P      DE_U  DE_E      DE_COMM       DE_Q                DE_G    DE_C          DE_L          DE_M      DE_F   
+		DE_H      DE_I  DE_E      DE_A          DE_O                DE_D    DE_T          DE_R          DE_N      DE_S 
+		DE_K      DE_Y  DE_DOT    DE_QUOT       DE_X                DE_J    DE_V          DE_W          DE_B      DE_Z     
+                                     &mo NAV    OS_SHFT             &kp SPACE  &mo SYM
+      
             >;
         };
 
@@ -89,10 +82,10 @@
         SYM {
             bindings = <
             
-        &kp ESC     &kp LBRC    &kp LCBR    &kp LPRN    &kp TILD  		  &kp CIRC    &kp RPRN   &kp RCBR   &kp RBRC   &kp GRV   
-        &kp MINS    &kp ASTR    &kp EQL     &kp UNDS    &kp DLR   		  &kp HASH    OS_CMD     OS_ALT     OS_CTRL    OS_SHFT   
-        &kp PLUS    &kp PIPE    &kp AT      &kp SLSH    &kp PERC 		  &kp EURO    &kp BSLS   &kp AMPR   &kp QUES   &kp EXLM   
-                                   &trans    &trans   					  &trans      &trans
+        &kp ESC  DE_LBRC  DE_LCBR  DE_LPRN  DE_TILD 		 DE_CIRC  DE_RPRN  DE_RCBR  DE_RBRC  DE_GRV 
+        DE_MINS  DE_ASTR  DE_EQL   DE_UNDS  DE_DLR  		 DE_HASH  OS_CMD   OS_ALT   OS_CTRL  OS_SHFT 
+        DE_PLUS  DE_PIPE  DE_AT    DE_SLSH  DE_PERC 		 DE_EURO  DE_BSLS  DE_AMPR  DE_QUES  DE_EXLM 
+                                   &trans    &trans   		 &trans      &trans
         
         >;
         };
