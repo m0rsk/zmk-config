@@ -80,7 +80,7 @@
             bindings = <
         	 							
 		&kp TAB   &trans   &trans   &trans   &kp K_VOL_UP               &mo CFG    &kp HOME     &kp UP       &kp END     &kp DEL   
-		&trans    &trans   &trans   &trans   &trans                     &kp CAPS   &kp LEFT     &kp DOWN     &kp RIGHT   &kp BSCP   
+		&trans    &trans   &trans   &trans   &trans                     &trans     &kp LEFT     &kp DOWN     &kp RIGHT   &kp BSCP   
 		ALL       CUT      PASTE    COPY     &kp K_PP                   &trans     &kp PGDN     &kp PGUP     SW_LANG     &kp ENTER   
                                    &trans    &trans                     &trans    &trans
             >;
