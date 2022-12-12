@@ -100,28 +100,28 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define DE_DEG  LS(GRAVE) // °
-#define DE_EXLM LS(N1)    // !
-#define DE_DQUO LS(N2)    // "
-#define DE_SECT LS(N3)    // §
-#define DE_DLR  LS(N4)    // $
-#define DE_PERC LS(N5)    // %
-#define DE_AMPR LS(N6)    // &
-#define DE_SLSH LS(N7)    // /
-#define DE_LPRN LS(N8)    // (
-#define DE_RPRN LS(N9)    // )
-#define DE_EQL  LS(N0)    // =
-#define DE_QUES LS(MINUS)   // ?
-#define DE_GRV  LS(EQUAL) // ` (dead)
+#define DE_DEG  &kp LS(GRAVE) // °
+#define DE_EXLM &kp LS(N1)    // !
+#define DE_DQUO &kp LS(N2)    // "
+#define DE_SECT &kp LS(N3)    // §
+#define DE_DLR  &kp LS(N4)    // $
+#define DE_PERC &kp LS(N5)    // %
+#define DE_AMPR &kp LS(N6)    // &
+#define DE_SLSH &kp LS(N7)    // /
+#define DE_LPRN &kp LS(N8)    // (
+#define DE_RPRN &kp LS(N9)    // )
+#define DE_EQL  &kp LS(N0)    // =
+#define DE_QUES &kp LS(MINUS)   // ?
+#define DE_GRV  &kp LS(EQUAL) // ` (dead)
 // Row 2
-#define DE_ASTR LS(RBRC) // *
+#define DE_ASTR &kp LS(RBRC) // *
 // Row 3
-#define DE_QUOT LS(NUHS) // '
+#define DE_QUOT &kp LS(NUHS) // '
 // Row 4
-#define DE_RABK LS(NUBS) // >
-#define DE_SCLN LS(COMMA) // ;
-#define DE_COLN LS(DOT)  // :
-#define DE_UNDS LS(SLASH) // _
+#define DE_RABK &kp LS(NUBS) // >
+#define DE_SCLN &kp LS(COMMA) // ;
+#define DE_COLN &kp LS(DOT)  // :
+#define DE_UNDS &kp LS(SLASH) // _
 
 /* AltGr symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
@@ -137,26 +137,26 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define DE_SUP2 RA(N2)    // ²
-#define DE_SUP3 RA(N3)    // ³
-#define DE_LCBR RA(N7)    // {
-#define DE_LBRC RA(N8)    // [
-#define DE_RBRC RA(N9)    // ]
-#define DE_RCBR RA(N0)    // }
-#define DE_BSLS RA(MINUS)   // (backslash)
+#define DE_SUP2 &kp RA(N2)    // ²
+#define DE_SUP3 &kp RA(N3)    // ³
+#define DE_LCBR &kp RA(N7)    // {
+#define DE_LBRC &kp RA(N8)    // [
+#define DE_RBRC &kp RA(N9)    // ]
+#define DE_RCBR &kp RA(N0)    // }
+#define DE_BSLS &kp RA(MINUS)   // (backslash)
 // Row 2
-#define DE_AT   RA(Q)    // @
-#define DE_EURO RA(E)    // €
-#define DE_TILD RA(RBRC) // ~
+#define DE_AT   &kp RA(Q)    // @
+#define DE_EURO &kp RA(E)    // €
+#define DE_TILD &kp RA(RBRC) // ~
 // Row 4
-#define DE_PIPE RA(NUBS) // |
-#define DE_MICR RA(M)    // µ
+#define DE_PIPE &kp RA(NUBS) // |
+#define DE_MICR &kp RA(M)    // µ
 
 // DEPRECATED
-#define DE_UE   LBRC
-#define DE_OE   SEMI
-#define DE_AE   SQT
-#define DE_LESS NUBS
+#define DE_UE   &kp LBRC
+#define DE_OE   &kp SEMI
+#define DE_AE   &kp SQT
+#define DE_LESS &kp NUBS
 #define DE_RING DE_DEG
 #define DE_DQOT DE_DQUO
 #define DE_PARA DE_SECT
