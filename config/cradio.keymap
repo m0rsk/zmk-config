@@ -10,6 +10,11 @@
 #define ALL &kp LC(A)
 #define CUT &kp LC(X)
 
+#define NAV 1
+#define NUM 2
+#define SYM 3
+#define COMP 4
+#define CFG 5
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -58,22 +63,20 @@
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-		    label = "DEFAULT";
+		    
             bindings = <
-		DE_P      DE_U  &sl 4     DE_COMM       DE_Q                DE_G    DE_C          DE_L          DE_M      DE_F   
+		DE_P      DE_U  &sl COMP  DE_COMM       DE_Q                DE_G    DE_C          DE_L          DE_M      DE_F   
 		DE_H      DE_I  DE_E      DE_A          DE_O                DE_D    DE_T          DE_R          DE_N      DE_S 
 		DE_K      DE_Y  DE_DOT    DE_QUOT       DE_X                DE_J    DE_V          DE_W          DE_B      DE_Z     
-                                     &mo 1    OS_SHFT             &kp SPACE  &mo 2
+                                     &mo NAV    OS_SHFT             &kp SPACE  &mo SYM
       
             >;
         };
 
 		nav_layer {
-            
-label = "NAV"; 
-bindings = <
-        								
-		&kp TAB   &trans   &trans  &trans   &kp K_VOL_UP               &mo 5    &kp HOME     &kp UP       &kp END     &kp DEL   
+            bindings = <
+        	 							
+		&kp TAB   &trans   &trans  &trans   &kp K_VOL_UP               &mo CFG    &kp HOME     &kp UP       &kp END     &kp DEL   
 		OS_SHFT   OS_CTRL  OS_ALT  OS_CMD   &kp K_VOL_UP               &kp CAPS   &kp LEFT     &kp DOWN     &kp RIGHT   &kp BSPC   
 		ALL       CUT      PASTE   COPY     &kp K_PP                   &trans     &kp PG_DN    &kp PG_UP    &trans      &kp ENTER   
                                    &trans   &trans                     &trans     &trans
@@ -81,7 +84,7 @@ bindings = <
         };
 
         sym_layer {
-            label = "SYM";
+            
             bindings = <
         &kp ESC  DE_LBRC  DE_LCBR  DE_LPRN  DE_TILD 		 DE_CIRC  DE_RPRN  DE_RCBR  DE_RBRC  DE_GRV 
         DE_MINS  DE_ASTR  DE_EQL   DE_UNDS  DE_DLR  		 DE_HASH  OS_CMD   OS_ALT   OS_CTRL  OS_SHFT 
@@ -93,19 +96,19 @@ bindings = <
 
 
         num_layer {
-		    label = "NUM";
+		    
             bindings = <
 		&kp KP_N7  &kp KP_N5   &kp KP_N3   &kp KP_N1   &kp KP_N9    &kp KP_N8    &kp KP_N0   &kp KP_N2    &kp KP_N4    &kp KP_N6   
         OS_SHFT    OS_CTRL     OS_ALT      OS_CMD      &kp F11      &kp F10      OS_CMD      OS_ALT       OS_CTRL      OS_SHFT   
         &kp F7     &kp F5      &kp F3      &kp F1      &kp F9       &kp F8       &kp F12     &kp F2       &kp F4       &kp F6   
-                                             &trans    &trans       &trans    &trans	
+                                             &trans    &trans       &trans       &trans	
 			
          >;
         };
         
 		
 		compose_layer {
-                 label = "COMP";
+                 
                  bindings = <
 	                &trans  DE_UDIA &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
                     &trans  &trans  &trans  DE_ADIA DE_ODIA &trans  &trans  &trans  &trans  DE_SS
@@ -116,7 +119,7 @@ bindings = <
              };
 
         config_layer {
-            label = "CFG";
+            
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
