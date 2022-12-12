@@ -76,10 +76,10 @@
 		nav_layer {
             bindings = <
         	 							
-		&kp TAB   &trans   &trans  &trans   &kp K_VOL_UP               &mo CFG    &kp HOME     &kp UP       &kp END     &kp DEL   
-		OS_SHFT   OS_CTRL  OS_ALT  OS_CMD   &kp K_VOL_UP               &kp CAPS   &kp LEFT     &kp DOWN     &kp RIGHT   &kp BSPC   
-		ALL       CUT      PASTE   COPY     &kp K_PP                   &trans     &kp PG_DN    &kp PG_UP    &trans      &kp ENTER   
-                                   &trans   &trans                     &trans     &trans
+		&kp TAB   &trans   &trans     &trans      &kp K_VOL_UP               &mo CFG    &kp HOME     &kp UP       &kp END     &kp DEL   
+		OS_SHFT   OS_CTRL  OS_ALT     OS_CMD      &kp K_VOL_UP               &kp CAPS   &kp LEFT     &kp DOWN     &kp RIGHT   &kp BSPC   
+		&kp LC(A) &kp LC(X) &kp LC(V) &kp LC(C)   &kp K_PP                   &trans     &kp PG_DN    &kp PG_UP    &trans      &kp ENTER   
+                                      &trans      &trans                     &trans     &trans
             >;
         };
 
