@@ -109,8 +109,8 @@
 		COMP {
         
         bindings = <
-	 &trans  DE_UDIA,&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
-     &trans  &trans  &trans  DE_ADIA DE_ODIA,&trans  &trans  &trans  &trans  DE_SS
+	 &trans  DE_UDIA &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
+     &trans  &trans  &trans  DE_ADIA DE_ODIA &trans  &trans  &trans  &trans  DE_SS
      &trans  &trans  &trans  &trans  &trans  &trans  &trans  DE_SUP2 DE_SUP3 &trans  
                              &trans  &trans  &trans  &trans    
 		
