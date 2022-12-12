@@ -100,21 +100,21 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define DE_DEG  LS(DE_CIRC) // °
-#define DE_EXLM LS(DE_1)    // !
-#define DE_DQUO LS(DE_2)    // "
-#define DE_SECT LS(DE_3)    // §
-#define DE_DLR  LS(DE_4)    // $
-#define DE_PERC LS(DE_5)    // %
-#define DE_AMPR LS(DE_6)    // &
-#define DE_SLSH LS(DE_7)    // /
-#define DE_LPRN LS(DE_8)    // (
-#define DE_RPRN LS(DE_9)    // )
-#define DE_EQL  LS(DE_0)    // =
-#define DE_QUES LS(DE_SS)   // ?
-#define DE_GRV  LS(DE_ACUT) // ` (dead)
+#define DE_DEG  LS(GRAVE) // °
+#define DE_EXLM LS(N1)    // !
+#define DE_DQUO LS(N2)    // "
+#define DE_SECT LS(N3)    // §
+#define DE_DLR  LS(N4)    // $
+#define DE_PERC LS(N5)    // %
+#define DE_AMPR LS(N6)    // &
+#define DE_SLSH LS(N7)    // /
+#define DE_LPRN LS(N8)    // (
+#define DE_RPRN LS(N9)    // )
+#define DE_EQL  LS(N0)    // =
+#define DE_QUES LS(MINUS)   // ?
+#define DE_GRV  LS(EQUAL) // ` (dead)
 // Row 2
-#define DE_ASTR LS(DE_PLUS) // *
+#define DE_ASTR LS(RBRC) // *
 // Row 3
 #define DE_QUOT LS(NUHS) // '
 // Row 4
@@ -137,26 +137,26 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1
-#define DE_SUP2 RA(DE_2)    // ²
-#define DE_SUP3 RA(DE_3)    // ³
-#define DE_LCBR RA(DE_7)    // {
-#define DE_LBRC RA(DE_8)    // [
-#define DE_RBRC RA(DE_9)    // ]
-#define DE_RCBR RA(DE_0)    // }
+#define DE_SUP2 RA(N2)    // ²
+#define DE_SUP3 RA(N3)    // ³
+#define DE_LCBR RA(N7)    // {
+#define DE_LBRC RA(N8)    // [
+#define DE_RBRC RA(N9)    // ]
+#define DE_RCBR RA(N0)    // }
 #define DE_BSLS RA(DE_SS)   // (backslash)
 // Row 2
-#define DE_AT   RA(DE_Q)    // @
-#define DE_EURO RA(DE_E)    // €
-#define DE_TILD RA(DE_PLUS) // ~
+#define DE_AT   RA(Q)    // @
+#define DE_EURO RA(E)    // €
+#define DE_TILD RA(RBRC) // ~
 // Row 4
-#define DE_PIPE RA(DE_LABK) // |
-#define DE_MICR RA(DE_M)    // µ
+#define DE_PIPE RA(NUBS) // |
+#define DE_MICR RA(M)    // µ
 
 // DEPRECATED
-#define DE_UE   DE_UDIA
-#define DE_OE   DE_ODIA
-#define DE_AE   DE_ADIA
-#define DE_LESS DE_LABK
+#define DE_UE   LBRC
+#define DE_OE   SEMI
+#define DE_AE   SQT
+#define DE_LESS NUBS
 #define DE_RING DE_DEG
 #define DE_DQOT DE_DQUO
 #define DE_PARA DE_SECT
