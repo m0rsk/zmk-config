@@ -60,7 +60,7 @@
         default_layer {
 		    label = "DEFAULT";
             bindings = <
-		DE_P      DE_U  &sl COMP  DE_COMM       DE_Q                DE_G    DE_C          DE_L          DE_M      DE_F   
+		DE_P      DE_U  &sl 4     DE_COMM       DE_Q                DE_G    DE_C          DE_L          DE_M      DE_F   
 		DE_H      DE_I  DE_E      DE_A          DE_O                DE_D    DE_T          DE_R          DE_N      DE_S 
 		DE_K      DE_Y  DE_DOT    DE_QUOT       DE_X                DE_J    DE_V          DE_W          DE_B      DE_Z     
                                      &mo NAV    OS_SHFT             &kp SPACE  &mo SYM
