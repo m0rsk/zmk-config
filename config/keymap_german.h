@@ -118,10 +118,10 @@
 // Row 3
 #define DE_QUOT LS(NUHS) // '
 // Row 4
-#define DE_RABK LS(DE_LABK) // >
-#define DE_SCLN LS(DE_COMM) // ;
-#define DE_COLN LS(DE_DOT)  // :
-#define DE_UNDS LS(DE_MINS) // _
+#define DE_RABK LS(NUBS) // >
+#define DE_SCLN LS(COMMA) // ;
+#define DE_COLN LS(DOT)  // :
+#define DE_UNDS LS(SLASH) // _
 
 /* AltGr symbols
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
@@ -143,7 +143,7 @@
 #define DE_LBRC RA(N8)    // [
 #define DE_RBRC RA(N9)    // ]
 #define DE_RCBR RA(N0)    // }
-#define DE_BSLS RA(DE_SS)   // (backslash)
+#define DE_BSLS RA(MINUS)   // (backslash)
 // Row 2
 #define DE_AT   RA(Q)    // @
 #define DE_EURO RA(E)    // €
