@@ -116,7 +116,7 @@
 // Row 2
 #define DE_ASTR LS(DE_PLUS) // *
 // Row 3
-#define DE_QUOT LS(DE_HASH) // '
+#define DE_QUOT LS(NUHS) // '
 // Row 4
 #define DE_RABK LS(DE_LABK) // >
 #define DE_SCLN LS(DE_COMM) // ;
