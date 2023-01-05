@@ -47,12 +47,6 @@
             bindings = <&kp>, <&kp>;
 	    };
 	
-	at: alt_tabber {
-            compatible = "zmk,mod-holder";
-            label = "ALT_TABBER";
-            #binding-cells = <1>;
-            mods = <MOD_LALT>;
-	    };
 	
     };
 
@@ -84,7 +78,7 @@
 		nav_layer {
             bindings = <
         	 							
-		&kp TAB   &at TAB   &trans     &trans      &kp K_VOL_UP               &mo CFG    &kp HOME     &kp UP       &kp END     &kp DEL   
+		&kp TAB   &LA(TAB)   &trans     &trans      &kp K_VOL_UP               &mo CFG    &kp HOME     &kp UP       &kp END     &kp DEL   
 		OS_SHFT   OS_CTRL  OS_ALT     OS_CMD      &kp K_VOL_UP               &kp CAPS   &kp LEFT     &kp DOWN     &kp RIGHT   &kp BSPC   
 		&kp LC(A) &kp LC(X) &kp LC(V) &kp LC(C)   &kp K_PP                   &trans     &kp PG_DN    &kp PG_UP    &trans      &kp ENTER   
                                               &trans      &trans                     &trans     &trans
