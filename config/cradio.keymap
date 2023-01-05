@@ -41,12 +41,19 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <50>;
-            quick-tap-ms = <20>;
+            tapping-term-ms = <300>;
+            quick-tap-ms = <125>;
             global-quick-tap;
             bindings = <&kp>, <&kp>;
-        };
-		
+	    };
+	
+	at: alt_tabber {
+            compatible = "zmk,mod-holder";
+            label = "ALT_TABBER";
+            #binding-cells = <1>;
+            mods = <MOD_LALT>;
+	    };
+	
     };
 
 
@@ -77,10 +84,10 @@
 		nav_layer {
             bindings = <
         	 							
-		&kp TAB   &trans   &trans     &trans      &kp K_VOL_UP               &mo CFG    &kp HOME     &kp UP       &kp END     &kp DEL   
+		&kp TAB   &at TAB   &trans     &trans      &kp K_VOL_UP               &mo CFG    &kp HOME     &kp UP       &kp END     &kp DEL   
 		OS_SHFT   OS_CTRL  OS_ALT     OS_CMD      &kp K_VOL_UP               &kp CAPS   &kp LEFT     &kp DOWN     &kp RIGHT   &kp BSPC   
 		&kp LC(A) &kp LC(X) &kp LC(V) &kp LC(C)   &kp K_PP                   &trans     &kp PG_DN    &kp PG_UP    &trans      &kp ENTER   
-                                      &trans      &trans                     &trans     &trans
+                                              &trans      &trans                     &trans     &trans
             >;
         };
 
@@ -102,7 +109,7 @@
 		&kp N7     &kp N5      &kp N3      &kp N1      &kp N9       &kp N8       &kp N0      &kp N2       &kp N4       &kp N6   
                 OS_SHFT    OS_CTRL     OS_ALT      OS_CMD      &kp F11      &kp F10      OS_CMD      OS_ALT       OS_CTRL      OS_SHFT   
                 &kp F7     &kp F5      &kp F3      &kp F1      &kp F9       &kp F8       &kp F12     &kp F2       &kp F4       &kp F6   
-                                                     &trans    &trans       &trans       &trans	
+                                                   &trans      &trans       &trans       &trans	
 			
          >;
         };
@@ -111,7 +118,7 @@
 		compose_layer {
                  
                  bindings = <
-	                &trans  DE_UDIA &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
+	            &trans  DE_UDIA &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  
                     &trans  &trans  &trans  DE_ADIA DE_ODIA &trans  &trans  &trans  &trans  DE_SS
                     &trans  &trans  &trans  &trans  &trans  &trans  &trans  DE_SUP2 DE_SUP3 &trans  
                                             &trans  &trans  &trans  &trans    
