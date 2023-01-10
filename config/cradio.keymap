@@ -33,13 +33,13 @@
 #include <dt-bindings/zmk/outputs.h>	
 #include "keymap_german.h"
 	
-	macros {
+/{	macros {
         SHIFTED(EXCL, "shifted_excl");
         SHIFTED(AT, "shifted_at");
         SHIFTED(HASH, "shifted_hash");
         /* etc. */
         };
-	
+};	
 	
 	&sk {
         release-after-ms = <2000>;
