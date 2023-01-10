@@ -1,6 +1,16 @@
-
-// Copyright (c) 2022 The ZMK Contributors
-// SPDX-License-Identifier: MIT
+#define SHIFTED(sym, macro_label) s_##sym: s_##sym {\
+        label = macro_label;\
+        compatible = "zmk,behavior-macro";\
+        wait-ms = <50>;\
+        #binding-cells = <0>;\
+        bindings\
+            = <&macro_press &kp LSHFT>\
+            , <&macro_press &kp sym>\
+            , <&macro_release &kp LSHFT>\
+            , <&macro_pause_for_release>\
+            , <&macro_release &kp sym>\
+            ;\
+    }
 
 #define OS_CMD  &sk LGUI
 #define OS_ALT  &sk LALT
@@ -23,41 +33,44 @@
 #include <dt-bindings/zmk/outputs.h>	
 #include "keymap_german.h"
 	
-
+	macros {
+        SHIFTED(EXCL, "shifted_excl");
+        SHIFTED(AT, "shifted_at");
+        SHIFTED(HASH, "shifted_hash");
+        /* etc. */
+        };
 	
 	
 	&sk {
-    release-after-ms = <2000>;
-    //quick-release;
-    /delete-property/ ignore-modifiers;
-     };
+        release-after-ms = <2000>;
+        //quick-release;
+        /delete-property/ ignore-modifiers;
+        };
 	
 	
  
-/ {
-    behaviors {
-        ht: hold_tap {
-            label = "hold_tap";
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <300>;
-            quick-tap-ms = <125>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-	    };
-	
-	
-    };
+	/ {
+	    behaviors {
+       		 ht: hold_tap {
+            			label = "hold_tap";
+            			compatible = "zmk,behavior-hold-tap";
+            			#binding-cells = <2>;
+           			flavor = "tap-preferred";
+            			tapping-term-ms = <300>;
+            			quick-tap-ms = <125>;
+            			global-quick-tap;
+            			bindings = <&kp>, <&kp>;
+	    			};
+				};
 
 
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+   		conditional_layers {
+   				    compatible = "zmk,conditional-layers";
+      				    tri_layer {
+          					if-layers = <1 2>;		
+         					then-layer = <3>;
+        					};
+   				 };
 	
 
 	
