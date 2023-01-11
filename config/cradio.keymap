@@ -1,4 +1,4 @@
-#define SHIFTED(sym, label) ##lablel: ##label {\
+#define SHIFTED(sym, label) lablel: label {\
         //label = "label";\
         compatible = "zmk,behavior-macro";\
         wait-ms = <50>;\
@@ -12,7 +12,7 @@
             ;\
     }
 
-#define CTRLED(sym, label) ##label: ##label {\
+#define CTRLED(sym, label) label: label {\
         //label = macro_label;\
         compatible = "zmk,behavior-macro";\
         wait-ms = <50>;\
@@ -26,7 +26,7 @@
             ;\
     }
 
-#define RALTED(sym, label) ##label: ##label {\
+#define RALTED(sym, label) label: label {\
         //label = macro_label;\
         compatible = "zmk,behavior-macro";\
         wait-ms = <50>;\
