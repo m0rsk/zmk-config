@@ -51,46 +51,46 @@
 
 	
 /{	macros {
-        CTRLED(C,"copy")
-        CTRLED(V,"paste")
-        CTRLED(X,"cut")
-        CTRLED(A,"all")
+        CTRLED(C,"copy");
+        CTRLED(V,"paste");
+        CTRLED(X,"cut");
+        CTRLED(A,"all");
         
         
         //shifted symbols
-        SHIFTED  (GRAVE,"DE_DEG")    // °
-        SHIFTED  (N1,"DE_EXLM")      // !
-        SHIFTED  (N2,"DE_DQUO")      // "
-        SHIFTED  (N3,"DE_SECT")      // §
-        SHIFTED  (N4,"DE_DLR")       // $
-        SHIFTED  (N5,"DE_PERC")      // %
-        SHIFTED  (N6,"DE_AMPR")      // &
-        SHIFTED  (N7,"DE_SLSH")      // /
-        SHIFTED  (N8,"DE_LPRN")      // (
-        SHIFTED  (N9,"DE_RPRN")      // )
-        SHIFTED  (N0,"DE_EQL")       // =
-        SHIFTED  (MINUS,"DE_QUES")   // ?
-        SHIFTED  (EQUAL,"DE_GRV")    // ` (dead)
-        SHIFTED  (RBRC,"DE_ASTR")    // *
-        SHIFTED  (NUHS,"DE_QUOT")    // '
-        SHIFTED  (NUBS,"DE_RABK")    // >
-        SHIFTED  (COMMA,"DE_SCLN")   // ;
-        SHIFTED  (DOT,"DE_COLN")     // :
-        SHIFTED  (SLASH,"DE_UNDS")   // _
+        SHIFTED  (GRAVE,"DE_DEG");    // °
+        SHIFTED  (N1,"DE_EXLM");      // !
+        SHIFTED  (N2,"DE_DQUO");      // "
+        SHIFTED  (N3,"DE_SECT");      // §
+        SHIFTED  (N4,"DE_DLR");       // $
+        SHIFTED  (N5,"DE_PERC");      // %
+        SHIFTED  (N6,"DE_AMPR");      // &
+        SHIFTED  (N7,"DE_SLSH");      // /
+        SHIFTED  (N8,"DE_LPRN");      // (
+        SHIFTED  (N9,"DE_RPRN");      // );
+        SHIFTED  (N0,"DE_EQL");       // =
+        SHIFTED  (MINUS,"DE_QUES");   // ?
+        SHIFTED  (EQUAL,"DE_GRV");    // ` (dead);
+        SHIFTED  (RBRC,"DE_ASTR");    // *
+        SHIFTED  (NUHS,"DE_QUOT");    // '
+        SHIFTED  (NUBS,"DE_RABK");    // >
+        SHIFTED  (COMMA,"DE_SCLN");   // ;
+        SHIFTED  (DOT,"DE_COLN");     // :
+        SHIFTED  (SLASH,"DE_UNDS");   // _
         
         //alt gr symbols   
-        RALTED  (N2,"DE_SUP2")       // ²
-        RALTED  (N3,"DE_SUP3")       // ³
-        RALTED  (N7,"DE_LCBR")       // {
-        RALTED  (N8,"DE_LBRC")       // [
-        RALTED  (N9,"DE_RBRC")       // ]
-        RALTED  (N0,"DE_RCBR")       // }
-        RALTED  (MINUS,"DE_BSLS")    // (backslash)
-        RALTED  (Q,"DE_AT")          // @
-        RALTED  (E,"DE_EURO")        // €      
-        RALTED  (RBRC,"DE_TILD")     // ~
-        RALTED  (NUBS,"DE_PIPE")     // |
-        RALTED  (M,"DE_MICR")        // µ
+        RALTED  (N2,"DE_SUP2");       // ²
+        RALTED  (N3,"DE_SUP3");       // ³
+        RALTED  (N7,"DE_LCBR");       // {
+        RALTED  (N8,"DE_LBRC");       // [
+        RALTED  (N9,"DE_RBRC");       // ]
+        RALTED  (N0,"DE_RCBR");       // }
+        RALTED  (MINUS,"DE_BSLS");    // (backslash)
+        RALTED  (Q,"DE_AT");          // @
+        RALTED  (E,"DE_EURO");        // €      
+        RALTED  (RBRC,"DE_TILD");     // ~
+        RALTED  (NUBS,"DE_PIPE");     // |
+        RALTED  (M,"DE_MICR");        // µ
 
                 
         };
