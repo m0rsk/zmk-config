@@ -1,5 +1,5 @@
-#define SHIFTED(sym, macro_label) s_##sym: s_##sym {\
-        label = macro_label;\
+#define SHIFTED(sym, label) ##lablel: ##label {\
+        //label = "label";\
         compatible = "zmk,behavior-macro";\
         wait-ms = <50>;\
         #binding-cells = <0>;\
@@ -12,8 +12,8 @@
             ;\
     }
 
-#define CTRLED(sym, macro_label) s_##sym: s_##sym {\
-        label = macro_label;\
+#define CTRLED(sym, label) ##label: ##label {\
+        //label = macro_label;\
         compatible = "zmk,behavior-macro";\
         wait-ms = <50>;\
         #binding-cells = <0>;\
@@ -26,8 +26,8 @@
             ;\
     }
 
-#define RALTED(sym, macro_label) s_##sym: s_##sym {\
-        label = macro_label;\
+#define RALTED(sym, label) ##label: ##label {\
+        //label = macro_label;\
         compatible = "zmk,behavior-macro";\
         wait-ms = <50>;\
         #binding-cells = <0>;\
@@ -65,39 +65,39 @@
         
         
         //shifted symbols
-        SHIFTED  (GRAVE,"DE_DEG")    // °
-        SHIFTED  (N1,"DE_EXLM")      // !
-        SHIFTED  (N2,"DE_DQUO")      // "
-        SHIFTED  (N3,"DE_SECT")      // §
-        SHIFTED  (N4,"DE_DLR")       // $
-        SHIFTED  (N5,"DE_PERC")      // %
-        SHIFTED  (N6,"DE_AMPR")      // &
-        SHIFTED  (N7,"DE_SLSH")      // /
-        SHIFTED  (N8,"DE_LPRN")      // (
-        SHIFTED  (N9,"DE_RPRN")      // )
-        SHIFTED  (N0,"DE_EQL")       // =
-        SHIFTED  (MINUS,"DE_QUES")   // ?
-        SHIFTED  (EQUAL,"DE_GRV")    // ` (dead)
-        SHIFTED  (RBRC,"DE_ASTR")    // *
-        SHIFTED  (NUHS,"DE_QUOT")    // '
-        SHIFTED  (NUBS,"DE_RABK")    // >
-        SHIFTED  (COMMA,"DE_SCLN")   // ;
-        SHIFTED  (DOT,"DE_COLN")     // :
-        SHIFTED  (SLASH,"DE_UNDS")   // _
+        SHIFTED  (GRAVE,DE_DEG)    // °
+        SHIFTED  (N1,DE_EXLM)      // !
+        SHIFTED  (N2,DE_DQUO)      // "
+        SHIFTED  (N3,DE_SECT)      // §
+        SHIFTED  (N4,DE_DLR)       // $
+        SHIFTED  (N5,DE_PERC)      // %
+        SHIFTED  (N6,DE_AMPR)      // &
+        SHIFTED  (N7,DE_SLSH)      // /
+        SHIFTED  (N8,DE_LPRN)      // (
+        SHIFTED  (N9,DE_RPRN)      // )
+        SHIFTED  (N0,DE_EQL)       // =
+        SHIFTED  (MINUS,DE_QUES)   // ?
+        SHIFTED  (EQUAL,DE_GRV)    // ` (dead)
+        SHIFTED  (RBRC,DE_ASTR)    // *
+        SHIFTED  (NUHS,DE_QUOT)    // '
+        SHIFTED  (NUBS,DE_RABK)    // >
+        SHIFTED  (COMMA,DE_SCLN)   // ;
+        SHIFTED  (DOT,DE_COLN)     // :
+        SHIFTED  (SLASH,DE_UNDS)   // _
         
         //alt gr symbols   
-        RALTED  (N2,"DE_SUP2")       // ²
-        RALTED  (N3,"DE_SUP3")       // ³
-        RALTED  (N7,"DE_LCBR")       // {
-        RALTED  (N8,"DE_LBRC")       // [
-        RALTED  (N9,"DE_RBRC")       // ]
-        RALTED  (N0,"DE_RCBR")       // }
-        RALTED  (MINUS,"DE_BSLS")    // (backslash)
-        RALTED  (Q,"DE_AT")          // @
-        RALTED  (E,"DE_EURO")        // €      
-        RALTED  (RBRC,"DE_TILD")     // ~
-        RALTED  (NUBS,"DE_PIPE")     // |
-        RALTED  (M,"DE_MICR")        // µ
+        RALTED  (N2,DE_SUP2)       // ²
+        RALTED  (N3,DE_SUP3)       // ³
+        RALTED  (N7,DE_LCBR)       // {
+        RALTED  (N8,DE_LBRC)       // [
+        RALTED  (N9,DE_RBRC)       // ]
+        RALTED  (N0,DE_RCBR)       // }
+        RALTED  (MINUS,DE_BSLS)    // (backslash)
+        RALTED  (Q,DE_AT)          // @
+        RALTED  (E,DE_EURO)        // €      
+        RALTED  (RBRC,DE_TILD)     // ~
+        RALTED  (NUBS,DE_PIPE)     // |
+        RALTED  (M,DE_MICR)        // µ
 
                 
         };
@@ -183,13 +183,13 @@
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │    Ü     │          │          │          │   │          │          │          │          │          │
-             &kp ESC   DE_LBRC     DE_LCBR    DE_LPRN    DE_TILD       DE_CIRC    DE_RPRN    DE_RCBR    DE_RBRC    DE_GRV 
+          &kp ESC   &kp DE_LBRC &kp DE_LCBR &kp DE_LPRN &kp DE_TILD &kp DE_CIRC &kp DE_RPRN &kp DE_RCBR &kp DE_RBRC &kp DE_GRV 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │    ß     │
-            DE_MINS    DE_ASTR     DE_EQL    DE_UNDS    DE_DLR         DE_HASH    OS_CMD     OS_ALT     OS_CTRL    OS_SHFT 
+          &kp DE_MINS &kp DE_ASTR  &kp DE_EQL &kp DE_UNDS &kp DE_DLR   &kp DE_HASH OS_CMD     OS_ALT     OS_CTRL   OS_SHFT 
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
-            DE_PLUS    DE_PIPE     DE_AT     DE_SLSH    DE_PERC        DE_EURO    DE_BSLS    DE_AMPR    DE_QUES    DE_EXLM 
+          &kp DE_PLUS &kp DE_PIPE  &kp DE_AT  &kp DE_SLSH &kp DE_PERC  &kp DE_EURO &kp DE_BSLS &kp DE_AMPR &kp DE_QUES &kp DE_EXLM 
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &trans    &trans  		&trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
