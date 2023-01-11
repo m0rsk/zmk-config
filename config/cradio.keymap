@@ -58,10 +58,10 @@
 #include "keymap_german.h"
 	
 /{	macros {
-        CTRLED(C, "copy");
-        CTRLED(V, "paste");
-        CTRLED(X, "cut");
-        CTRLED(A, "all");
+        CTRLED(C,copy);
+        CTRLED(V,paste);
+        CTRLED(X,cut);
+        CTRLED(A,all);
         
         
         //shifted symbols
@@ -163,13 +163,13 @@
 		bindings = <							
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │    Ü     │          │          │          │   │          │          │          │          │          │
-            &kp TAB   &kp LA(TAB)  &trans     &trans  &kp K_VOL_UP      &mo CFG    &kp HOME   &kp UP    &kp END     &kp DEL   
+            &kp TAB     &trans     &trans     &trans  &kp C_VOL_UP      &mo CFG    &kp HOME   &kp UP    &kp END     &kp DEL   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │    ß     │
-            OS_SHFT    OS_CTRL     OS_ALT     OS_CMD  &kp K_VOL_UP     &kp CAPS   &kp LEFT   &kp DOWN  &kp RIGHT   &kp BSPC   
+            OS_SHFT    OS_CTRL     OS_ALT     OS_CMD  &kp C_VOL_UP     &kp CAPS   &kp LEFT   &kp DOWN  &kp RIGHT   &kp BSPC   
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
-              all       cut        paste      copy      &kp K_PP       &trans    &kp PG_DN   &kp PG_UP   &trans   &kp ENTER   
+            &kp all    &kp cut    &kp paste  &kp copy   &kp C_PP       &trans    &kp PG_DN   &kp PG_UP   &trans   &kp ENTER   
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &trans      &trans       &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
