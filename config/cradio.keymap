@@ -20,7 +20,7 @@
     }
 
 #define CTRLED(sym, macro_label) c_##sym: c_##sym {\
-        label = label;\
+        label = macro_label;\
         compatible = "zmk,behavior-macro";\
         wait-ms = <50>;\
         #binding-cells = <0>;\
