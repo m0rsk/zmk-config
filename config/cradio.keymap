@@ -5,9 +5,8 @@
 #include <dt-bindings/zmk/outputs.h>	
 #include "keymap_german.h"
 
-
-#define SHIFTED(sym, label) s_##sym: s_##sym {\
-        label = label;\
+#define SHIFTED(sym, macro_label) s_##sym: s_##sym {\
+        label = macro_label;\
         compatible = "zmk,behavior-macro";\
         wait-ms = <50>;\
         #binding-cells = <0>;\
@@ -20,7 +19,7 @@
             ;\
     }
 
-#define CTRLED(sym, label) c_##sym: c_##sym {\
+#define CTRLED(sym, macro_label) c_##sym: c_##sym {\
         label = label;\
         compatible = "zmk,behavior-macro";\
         wait-ms = <50>;\
@@ -34,8 +33,8 @@
             ;\
     }
 
-#define RALTED(sym, label) ra_##sym: ra_##sym {\
-        label = label;\
+#define RALTED(sym, macro_label) ra_##sym: ra_##sym {\
+        label = macro_label;\
         compatible = "zmk,behavior-macro";\
         wait-ms = <50>;\
         #binding-cells = <0>;\
@@ -51,32 +50,27 @@
 
 	
 /{	macros {
-        //CTRLED(C,"copy");
-        //CTRLED(V,"paste");
-        //CTRLED(X,"cut");
-        //CTRLED(A,"all");
-        
-        
+              
         //shifted symbols
-        SHIFTED  (GRAVE,"DE_DEG");    // °
-        SHIFTED  (N1,"DE_EXLM");      // !
-        SHIFTED  (N2,"DE_DQUO");      // "
-        SHIFTED  (N3,"DE_SECT");      // §
-        SHIFTED  (N4,"DE_DLR");       // $
-        SHIFTED  (N5,"DE_PERC");      // %
-        SHIFTED  (N6,"DE_AMPR");      // &
-        SHIFTED  (N7,"DE_SLSH");      // /
-        SHIFTED  (N8,"DE_LPRN");      // (
-        SHIFTED  (N9,"DE_RPRN");      // );
-        SHIFTED  (N0,"DE_EQL");       // =
-        SHIFTED  (MINUS,"DE_QUES");   // ?
-        SHIFTED  (EQUAL,"DE_GRV");    // ` (dead);
-        SHIFTED  (RBRC,"DE_ASTR");    // *
-        SHIFTED  (NUHS,"DE_QUOT");    // '
-        SHIFTED  (NUBS,"DE_RABK");    // >
-        SHIFTED  (COMMA,"DE_SCLN");   // ;
-        SHIFTED  (DOT,"DE_COLN");     // :
-        SHIFTED  (SLASH,"DE_UNDS");   // _
+        SHIFTED(GRAVE,"DE_DEG");    // °
+        SHIFTED(N1,"DE_EXLM");      // !
+        SHIFTED(N2,"DE_DQUO");      // "
+        SHIFTED(N3,"DE_SECT");      // §
+        SHIFTED(N4,"DE_DLR");       // $
+        SHIFTED(N5,"DE_PERC");      // %
+        SHIFTED(N6,"DE_AMPR");      // &
+        SHIFTED(N7,"DE_SLSH");      // /
+        SHIFTED(N8,"DE_LPRN");      // (
+        SHIFTED(N9,"DE_RPRN");      // );
+        SHIFTED(N0,"DE_EQL");       // =
+        SHIFTED(MINUS,"DE_QUES");   // ?
+        SHIFTED(EQUAL,"DE_GRV");    // ` (dead);
+        SHIFTED(RBRC,"DE_ASTR");    // *
+        SHIFTED(NUHS,"DE_QUOT");    // '
+        SHIFTED(NUBS,"DE_RABK");    // >
+        SHIFTED(COMMA,"DE_SCLN");   // ;
+        SHIFTED(DOT,"DE_COLN");     // :
+        SHIFTED(SLASH,"DE_UNDS");   // _
         
         //alt gr symbols   
         RALTED  (N2,"DE_SUP2");       // ²
@@ -92,7 +86,12 @@
         RALTED  (NUBS,"DE_PIPE");     // |
         RALTED  (M,"DE_MICR");        // µ
 
-                
+	//ctrl+...
+        CTRLED(C,"copy");
+        CTRLED(V,"paste");
+        CTRLED(X,"cut");
+        CTRLED(A,"all")
+                 
         };
 };	
 	
