@@ -140,39 +140,39 @@
 #define all &kp c_A
 #define paste &kp c_V
 //shifted symbols
-#define DE_DEG   &kp s_GRVE    // °
-#define DE_EXLM  &kp s_N1      // !
-#define DE_DQUO  &kp s_N2      // "
-#define DE_SECT  &kp s_N3      // §
-#define DE_DLR   &kp s_N4      // $
-#define DE_PERC  &kp s_N5      // %
-#define DE_AMPR  &kp s_N6      // &
-#define DE_SLSH  &kp s_N7      // /
-#define DE_LPRN  &kp s_N8      // &kp s_
-#define DE_RPRN  &kp s_N9      // )
-#define DE_EQL   &kp s_N0       // =
-#define DE_QUES  &kp s_MINUS   // ?
-#define DE_GRV   &kp s_EQUAL    // ` (dead)
-#define DE_ASTR  &kp s_RBRC    // *
-#define DE_QUOT  &kp s_NUHS    // '
-#define DE_RABK  &kp s_NUBS    // >
-#define DE_SCLN  &kp s_COMMA   // ;
-#define DE_COLN  &kp s_DOT     // :
-#define DE_WNDS  &kp s_SLASH   // _
+#define DE_DEG   &s_GRVE    // °
+#define DE_EXLM  &s_N1      // !
+#define DE_DQUO  &s_N2      // "
+#define DE_SECT  &s_N3      // §
+#define DE_DLR   &s_N4      // $
+#define DE_PERC  &s_N5      // %
+#define DE_AMPR  &s_N6      // &
+#define DE_SLSH  &s_N7      // /
+#define DE_LPRN  &s_N8      // &kp s_
+#define DE_RPRN  &s_N9      // )
+#define DE_EQL   &s_N0       // =
+#define DE_QUES  &s_MINUS   // ?
+#define DE_GRV   &s_EQUAL    // ` (dead)
+#define DE_ASTR  &s_RBRC    // *
+#define DE_QUOT  &s_NUHS    // '
+#define DE_RABK  &s_NUBS    // >
+#define DE_SCLN  &s_COMMA   // ;
+#define DE_COLN  &s_DOT     // :
+#define DE_WNDS  &s_SLASH   // _
         
         //alt gr symbols   
-#define DE_SUP2 &kp ra_N2       // ²
-#define DE_SUP3 &kp ra_N3       // ³
-#define DE_LCBR &kp ra_N7       // {
-#define DE_LBRC &kp ra_N8       // [
-#define DE_RBRC &kp ra_N9       // ]
-#define DE_RCBR &kp ra_N0       // }
-#define DE_BSLS &kp ra_MINUS    // (backslash)
-#define DE_AT &kp ra_Q          // @
-#define DE_EURO &kp ra_E        // €      
-#define DE_TILD &kp ra_RBRC     // ~
-#define DE_PIPE &kp ra_NUBS     // |
-#define DE_MICR &kp ra_M        // µ
+#define DE_SUP2 &ra_N2       // ²
+#define DE_SUP3 &ra_N3       // ³
+#define DE_LCBR &ra_N7       // {
+#define DE_LBRC &ra_N8       // [
+#define DE_RBRC &ra_N9       // ]
+#define DE_RCBR &ra_N0       // }
+#define DE_BSLS &ra_MINUS    // (backslash)
+#define DE_AT &ra_Q          // @
+#define DE_EURO &ra_E        // €      
+#define DE_TILD &ra_RBRC     // ~
+#define DE_PIPE &ra_NUBS     // |
+#define DE_MICR &ra_M        // µ
 
 	
 
