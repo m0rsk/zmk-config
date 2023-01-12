@@ -90,7 +90,7 @@
         CTRLED(C,"copy");
         CTRLED(V,"paste");
         CTRLED(X,"cut");
-        CTRLED(A,"all")
+        CTRLED(A,"all");
                  
         };
 };	
