@@ -158,7 +158,7 @@
 #define DE_RABK  &s_NUBS    // >
 #define DE_SCLN  &s_COMMA   // ;
 #define DE_COLN  &s_DOT     // :
-#define DE_WNDS  &s_SLASH   // _
+#define DE_UNDS  &s_SLASH   // _
         
         //alt gr symbols   
 #define DE_SUP2 &ra_N2       // ²
