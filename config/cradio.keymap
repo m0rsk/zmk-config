@@ -135,10 +135,10 @@
 #define NUM 3
 #define COMP 4
 #define CFG 5
-#define copy &kp c_C
-#define cut &kp c_X
-#define all &kp c_A
-#define paste &kp c_V
+#define copy &c_C
+#define cut &c_X
+#define all &c_A
+#define paste &c_V
 //shifted symbols
 #define DE_DEG   &s_GRVE    // °
 #define DE_EXLM  &s_N1      // !
