@@ -37,7 +37,7 @@
 #define DE_O    &kp O    // O
 #define DE_P    &kp P    // P
 #define DE_UDIA &kp LBKT // Ü
-#define DE_PLUS &kp RBRC // +
+#define DE_PLUS &kp RBKT // +
 // Row 3
 #define DE_A    &kp A    // A
 #define DE_S    &kp S    // S
