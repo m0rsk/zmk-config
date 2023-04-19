@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>	
 #include "keymap_german.h"
+#include <dt-bindings/zmk/mouse.h>
 
 #define SHIFTED(sym, macro_label) s_##sym: s_##sym {\
         label = macro_label;\
@@ -174,7 +175,18 @@
 #define DE_PIPE &ra_NUBS     // |
 #define DE_MICR &ra_M        // µ
 
-	
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_rClick {
+            timeout-ms = <50>;
+            key-positions = <4 14>;
+            bindings = <&mkp RCLK>;
+        };
+    };
+};
+
+
 
     keymap {
         compatible = "zmk,keymap";
