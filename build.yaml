@@ -14,7 +14,9 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: cradio
+    shield: cradio_left
+  - board: nice_nano_v2
+    shield: cradio_right
   - board: nrf52840_mdk_usb_dongle
-    shield: cradio
+    shield: cradio_left
 
