@@ -8,6 +8,5 @@ exposes: [i2c_oled]
 features:
   - keys
 siblings:
-  - sweep_left
-  - sweep_right
-  - sweep_dongle
+  - cradio_left
+  - cradio_right
