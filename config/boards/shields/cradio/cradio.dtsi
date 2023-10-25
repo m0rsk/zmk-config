@@ -55,18 +55,18 @@
 
 // The PS/2 GPIO and mouse drivers.
 / {
-    gpio_ps2: gpio_ps2 {
+    &gpio_ps2: gpio_ps2 {
 		status = "disabled";
         compatible = "gpio-ps2";
 
         // The two bottom left pins of the nice!nano (when it is facing down)
-        scl-gpios = <&gpio1 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        sda-gpios = <&gpio1 1 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        scl-gpios = <&gpio1 2>;
+        sda-gpios = <&gpio1 1>;
     };
 };
 
 / {
-    mouse_ps2: mouse_ps2 {
+    &mouse_ps2: mouse_ps2 {
 		status = "disabled";
         compatible = "zmk,mouse-ps2";
         ps2-device = <&gpio_ps2>;
@@ -76,6 +76,6 @@
         // instead of using a reset circuit.
         //
         // The bottom right pin of the nice!nano (when it is facing down)
-        rst-gpios = <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        rst-gpios = <&gpio1 7>;
     };
 };
