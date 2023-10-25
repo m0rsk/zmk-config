@@ -60,8 +60,8 @@
         compatible = "gpio-ps2";
 
         // The two bottom left pins of the nice!nano (when it is facing down)
-        scl-gpios = <&gpio1 2>;
-        sda-gpios = <&gpio1 7>;
+        scl-gpios = <&gpio1 02>;
+        sda-gpios = <&gpio1 01>;
     };
 };
 
@@ -76,6 +76,6 @@
         // instead of using a reset circuit.
         //
         // The bottom right pin of the nice!nano (when it is facing down)
-        rst-gpios = <&gpio1 1>;
+        rst-gpios = <&gpio1 07>;
     };
 };
