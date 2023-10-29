@@ -39,7 +39,7 @@
   // The PS/2 GPIO and mouse drivers.
   / {
       gpio_ps2: gpio_ps2 {
-  		status = "disabled";
+  		status = "enabled";
           compatible = "gpio-ps2";
 
           // The two bottom left pins of the nice!nano (when it is facing down)
@@ -50,7 +50,7 @@
 
   / {
       mouse_ps2: mouse_ps2 {
-  		status = "disabled";
+  		status = "enabled";
           compatible = "zmk,mouse-ps2";
           ps2-device = <&gpio_ps2 >;
 
