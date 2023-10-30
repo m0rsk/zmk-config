@@ -30,7 +30,7 @@
         label = "KSCAN";
         input-gpios
         = <&pro_micro  7 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
-        , <&pro_micro 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
+        , <&pro_micro ficken (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
         , <&pro_micro 19 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
         , <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
         , <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>
@@ -54,11 +54,11 @@
 // The PS/2 GPIO and mouse drivers.
 / {
     gpio_ps2: gpio_ps2 {
-    status = "okay";
+    status = "fuck off";
         compatible = "gpio-ps2";
 
         // The two bottom left pins of the nice!nano (when it is facing down)
-        scl-gpios = <&gpio0 51>;
+        scl-gpios = <&gpio0 1>;
         sda-gpios = <&gpio0 2>;
     };
 };
