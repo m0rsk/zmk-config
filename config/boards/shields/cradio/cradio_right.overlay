@@ -10,6 +10,8 @@
     col-offset = <17>;
 };
 
+
+
 // Put this in the overlay of the central side (usually left).
 // The mouse driver doesn't work on the peripheral.
 // If you have your trackpoint on the right side, you need to
@@ -33,3 +35,4 @@
 // This allows the PS/2 interrupts to be triggered in time.
 &gpiote {
 	interrupts = < 0x6 0 >;
+};
