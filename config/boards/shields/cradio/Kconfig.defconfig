@@ -1,12 +1,12 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-CONFIG_ZMK_EXT_POWER=y 
+CONFIG_ZMK_EXT_POWER=y
 
 if SHIELD_CRADIO_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "TestTP"
+    default "cradio-tp"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
