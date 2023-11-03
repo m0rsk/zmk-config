@@ -77,6 +77,6 @@
         // instead of using a reset circuit.
         //
         // The bottom right pin of the nice!nano (when it is facing down)
-        rst-gpios = <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        //rst-gpios = <&gpio1 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 };
