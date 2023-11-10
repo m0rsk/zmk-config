@@ -52,9 +52,9 @@
     }
 
 
-	
+
 /{	macros {
-              
+
         //shifted symbols
         SHIFTED(GRAVE,"DE_DEG");    // °
         SHIFTED(N1,"DE_EXLM");      // !
@@ -75,8 +75,8 @@
         SHIFTED(COMMA,"DE_SCLN");   // ;
         SHIFTED(DOT,"DE_COLN");     // :
         SHIFTED(SLASH,"DE_UNDS");   // _
-        
-        //alt gr symbols   
+
+        //alt gr symbols
         RALTED  (N2,"DE_SUP2");       // ²
         RALTED  (N3,"DE_SUP3");       // ³
         RALTED  (N7,"DE_LCBR");       // {
@@ -85,7 +85,7 @@
         RALTED  (N0,"DE_RCBR");       // }
         RALTED  (MINUS,"DE_BSLS");    // (backslash)
         RALTED  (Q,"DE_AT");          // @
-        RALTED  (E,"DE_EURO");        // €      
+        RALTED  (E,"DE_EURO");        // €
         RALTED  (RBRC,"DE_TILD");     // ~
         RALTED  (NUBS,"DE_PIPE");     // |
         RALTED  (M,"DE_MICR");        // µ
@@ -95,54 +95,11 @@
         CTRLED(V,"paste");
         CTRLED(X,"cut");
         CTRLED(A,"all");
-                 
+
         };
-};	
-	
-	&sk {
-        release-after-ms = <2000>;
-        //quick-release;
-        /delete-property/ ignore-modifiers;
-        };
-	
-	
- 
-	/ {
-	    behaviors {
-       		 ht: hold_tap {
-            			label = "hold_tap";
-            			compatible = "zmk,behavior-hold-tap";
-            			#binding-cells = <2>;
-           			flavor = "tap-preferred";
-            			tapping-term-ms = <300>;
-            			quick-tap-ms = <125>;
-            			global-quick-tap;
-            			bindings = <&kp>, <&kp>;
-	    			};
-				};
+};
 
 
-   		conditional_layers {
-   				    compatible = "zmk,conditional-layers";
-      				    tri_layer {
-          					if-layers = <1 2>;		
-         					then-layer = <3>;
-        					};
-   				 };
-	
-#define OS_CMD  &sk LGUI
-#define OS_ALT  &sk LALT
-#define OS_CTRL &sk LCTRL
-#define OS_SHFT &sk LSHIFT
-#define NAV 1
-#define SYM 2
-#define NUM 3
-#define COMP 4
-#define CFG 5
-#define copy &c_C
-#define cut &c_X
-#define all &c_A
-#define paste &c_V
 //shifted symbols
 #define DE_DEG   &s_GRVE    // °
 #define DE_EXLM  &s_N1      // !
@@ -163,8 +120,8 @@
 #define DE_SCLN  &s_COMMA   // ;
 #define DE_COLN  &s_DOT     // :
 #define DE_UNDS  &s_SLASH   // _
-        
-        //alt gr symbols   
+
+        //alt gr symbols
 #define DE_SUP2 &ra_N2       // ²
 #define DE_SUP3 &ra_N3       // ³
 #define DE_LCBR &ra_N7       // {
@@ -173,7 +130,7 @@
 #define DE_RCBR &ra_N0       // }
 #define DE_BSLS &ra_MINUS    // (backslash)
 #define DE_AT &ra_Q          // @
-#define DE_EURO &ra_E        // €      
+#define DE_EURO &ra_E        // €
 #define DE_TILD &ra_RBRC     // ~
 #define DE_PIPE &ra_NUBS     // |
 #define DE_MICR &ra_M        // µ
@@ -230,104 +187,193 @@
 #define DE_DOT  &kp DOT  // .
 #define DE_MINS &kp SLASH // -
 
+//Key bindings
+#define OS_CMD  &sk LGUI
+#define OS_ALT  &sk LALT
+#define OS_CTRL &sk LCTRL
+#define OS_SHFT &sk LSHIFT
+#define NAV 1
+#define SYM 2
+#define NUM 3
+#define COMP 4
+#define CFG 5
+#define copy &c_C
+#define cut &c_X
+#define all &c_A
+#define paste &c_V
 
+
+//
+//
+//
+
+&sk {
+  release-after-ms = <2000>;
+  //quick-release;
+  /delete-property/ ignore-modifiers;
+};
+
+
+
+/ {
+  behaviors {
+    ht: hold_tap {
+      label = "hold_tap";
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      flavor = "tap-preferred";
+      tapping-term-ms = <300>;
+      quick-tap-ms = <125>;
+      global-quick-tap;
+      bindings = <&kp>, <&kp>;
+    };
+  };
+//
+//
+//
+
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    tri_layer {
+      if-layers = <1 2>;
+      then-layer = <3>;
+    };
+  };
+//
+//
+//
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        // A oder Ä
+        A_AE {
+            timeout-ms = <100>;
+            key-positions = <0 1>;
+            bindings = <&kp DE_ADIA>;
+        };
+        //U oder Ü
+        U_UE {
+            timeout-ms = <100>;
+            key-positions = <0 1>;
+            bindings = <&kp DE_UDIA>;
+        };
+        //O oder Ö
+        O_OE {
+            timeout-ms = <100>;
+            key-positions = <0 1>;
+            bindings = <&kp DE_ODIA>;
+        };
+        //s oder ß
+        S_SS {
+            timeout-ms = <100>;
+            key-positions = <0 1>;
+            bindings = <&kp DE_SS>;
+        };
+
+    };
+};
+
+//
+//
+//
     keymap {
         compatible = "zmk,keymap";
         default_layer {
-		    
+
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │    Ü     │          │          │          │   │          │          │          │          │          │
-            DE_P        DE_U     &sl COMP    DE_COMM     DE_Q           DE_G       DE_C       DE_L       DE_M      DE_F   
+            DE_P        DE_U     &sl COMP    DE_COMM     DE_Q           DE_G       DE_C       DE_L       DE_M      DE_F
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │    ß     │
-            DE_H        DE_I       DE_E      DE_A        DE_O           DE_D       DE_T       DE_R       DE_N      DE_S 
+            DE_H        DE_I       DE_E      DE_A        DE_O           DE_D       DE_T       DE_R       DE_N      DE_S
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
-	    DE_K        DE_Y       DE_DOT   DE_QUOT      DE_X           DE_J       DE_V       DE_W       DE_B      DE_Z     
+	          DE_K        DE_Y       DE_DOT   DE_QUOT      DE_X           DE_J       DE_V       DE_W       DE_B      DE_Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &mo NAV   OS_SHFT       &kp SPACE   &mo SYM
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-      
+
             >;
         };
 
 		nav_layer {
-            
-		bindings = <							
+
+		bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp ESC     &kp TAB    &kp ENTER  &kp DEL  &kp C_VOL_UP      &mo CFG    &kp HOME   &kp UP    &kp END     &kp DEL   
+            &kp ESC     &kp TAB    &kp ENTER  &kp DEL  &kp C_VOL_UP      &mo CFG    &kp HOME   &kp UP    &kp END     &kp DEL
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │    ß     │
-            OS_SHFT    OS_CTRL     OS_ALT     OS_CMD  &kp C_VOL_UP     &kp CAPS   &kp LEFT   &kp DOWN  &kp RIGHT   &kp BSPC   
+            OS_SHFT    OS_CTRL     OS_ALT     OS_CMD  &kp C_VOL_UP     &kp CAPS   &kp LEFT   &kp DOWN  &kp RIGHT   &kp BSPC
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
-              all        cut       paste       copy     &kp C_PP       &trans    &kp PG_DN   &kp PG_UP   &trans   &kp ENTER   
+              all        cut       paste       copy     &kp C_PP       &trans    &kp PG_DN   &kp PG_UP   &trans   &kp ENTER
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &trans      &trans       &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
         >;
         };
 		//
-	
+
         sym_layer {
-            
-       
+
+
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │          │          │          │          │   │          │          │          │          │          │
-             &kp ESC    DE_LBRC    DE_LCBR    DE_LPRN    DE_TILD       DE_CIRC     DE_RPRN    DE_RCBR    DE_RBRC  DE_GRV 
+             &kp ESC    DE_LBRC    DE_LCBR    DE_LPRN    DE_TILD       DE_CIRC     DE_RPRN    DE_RCBR    DE_RBRC  DE_GRV
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │    ß     │
-           DE_MINS     DE_ASTR     DE_EQL    DE_UNDS    DE_DLR         DE_HASH     OS_CMD     OS_ALT     OS_CTRL   OS_SHFT 
+           DE_MINS     DE_ASTR     DE_EQL    DE_UNDS    DE_DLR         DE_HASH     OS_CMD     OS_ALT     OS_CTRL   OS_SHFT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
-            DE_PLUS    DE_PIPE     DE_AT      DE_SLSH    DE_PERC       DE_EURO     DE_BSLS    DE_AMPR    DE_QUES   DE_EXLM 
+            DE_PLUS    DE_PIPE     DE_AT      DE_SLSH    DE_PERC       DE_EURO     DE_BSLS    DE_AMPR    DE_QUES   DE_EXLM
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                               &trans    &trans  	&trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-        
+
         >;
         };
         //
         //
 		//
         num_layer {
-		    
+
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │    Ü     │          │          │          │   │          │          │          │          │          │
-             &kp N7     &kp N5     &kp N3     &kp N1     &kp N9         &kp N8     &kp N0     &kp N2     &kp N4     &kp N6   
+             &kp N7     &kp N5     &kp N3     &kp N1     &kp N9         &kp N8     &kp N0     &kp N2     &kp N4     &kp N6
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │    ß     │
-             OS_SHFT    OS_CTRL    OS_ALT     OS_CMD     &kp F11        &kp F10    OS_CMD     OS_ALT     OS_CTRL    OS_SHFT   
+             OS_SHFT    OS_CTRL    OS_ALT     OS_CMD     &kp F11        &kp F10    OS_CMD     OS_ALT     OS_CTRL    OS_SHFT
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
-             &kp F7     &kp F5     &kp F3     &kp F1     &kp F9         &kp F8     &kp F12    &kp F2     &kp F4     &kp F6   
+             &kp F7     &kp F5     &kp F3     &kp F1     &kp F9         &kp F8     &kp F12    &kp F2     &kp F4     &kp F6
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &trans     &trans         &trans     &trans	
+                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-					
+
         >;
         };
         //
 		//
 		//
 		compose_layer {
-                 
+
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│          │    Ü     │          │          │          │   │          │          │          │          │          │
-             &trans     DE_UDIA    &trans     &trans     &trans        &trans      &trans     &trans     &trans     &trans  
+             &trans     DE_UDIA    &trans     &trans     &trans        &trans      &trans     &trans     &trans     &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │    Ä     │     Ö    │   │          │          │          │          │    ß     │
              &trans     &trans     &trans    DE_ADIA     DE_ODIA       &trans      &trans     &trans     &trans      DE_SS
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
-             &trans     &trans     &trans     &trans     &trans        &trans      &trans    DE_SUP2    DE_SUP3     &trans  
+             &trans     &trans     &trans     &trans     &trans        &trans      &trans    DE_SUP2    DE_SUP3     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &trans     &trans        &trans      &trans    
+                                              &trans     &trans        &trans      &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 		>;
         };
@@ -335,7 +381,7 @@
 		//
 		//
         config_layer {
-            
+
         bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
