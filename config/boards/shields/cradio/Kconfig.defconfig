@@ -6,14 +6,22 @@ CONFIG_ZMK_EXT_POWER=y
 if SHIELD_CRADIO_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "cradio-tp"
+    default "cradio-tp_r"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
 endif
 
+if SHIELD_CRADIO_RIGHT
 
+config ZMK_KEYBOARD_NAME
+    default "cradio-tp_l"
+
+config ZMK_SPLIT_ROLE_CENTRAL
+    default n
+
+endif
 
 if SHIELD_CRADIO_LEFT || SHIELD_CRADIO_RIGHT
 
