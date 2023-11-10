@@ -249,27 +249,10 @@
         // A oder Ä
         A_AE {
             timeout-ms = <100>;
-            key-positions = <0 1>;
+            key-positions = <8 2>;
             bindings = <&kp DE_ADIA>;
         };
-        //U oder Ü
-        U_UE {
-            timeout-ms = <100>;
-            key-positions = <0 1>;
-            bindings = <&kp DE_UDIA>;
-        };
-        //O oder Ö
-        O_OE {
-            timeout-ms = <100>;
-            key-positions = <0 1>;
-            bindings = <&kp DE_ODIA>;
-        };
-        //s oder ß
-        S_SS {
-            timeout-ms = <100>;
-            key-positions = <0 1>;
-            bindings = <&kp DE_SS>;
-        };
+        
 
     };
 };
@@ -331,7 +314,7 @@
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
             DE_PLUS    DE_PIPE     DE_AT      DE_SLSH    DE_PERC       DE_EURO     DE_BSLS    DE_AMPR    DE_QUES   DE_EXLM
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &trans    &trans  	&trans     &trans
+                                              &trans    &trans  	      &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
         >;
