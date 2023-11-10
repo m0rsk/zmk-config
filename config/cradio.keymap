@@ -203,6 +203,40 @@
 #define paste &c_V
 
 
+/ {
+    combos {
+        compatible = "zmk,combos";
+        // A oder Ä
+        A_AE {
+            timeout-ms = <100>;
+            key-positions = <8 2>;
+            bindings = <&kp DE_ADIA>;
+        };
+        //U oder Ü
+        U_UE {
+            timeout-ms = <100>;
+            key-positions = <1 2>;
+            bindings = <&kp DE_UDIA>;
+        };
+        //O oder Ö
+        O_OE {
+            timeout-ms = <100>;
+            key-positions = <9 2>;
+            bindings = <&kp DE_ODIA>;
+        };
+        //s oder ß
+        S_SS {
+            timeout-ms = <100>;
+            key-positions = <22 2>;
+            bindings = <&kp DE_SS>;
+        };
+
+    };
+};
+
+
+
+
 //
 //
 //
@@ -228,9 +262,6 @@
       bindings = <&kp>, <&kp>;
     };
   };
-//
-//
-//
 
   conditional_layers {
     compatible = "zmk,conditional-layers";
@@ -242,20 +273,6 @@
 //
 //
 //
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-        // A oder Ä
-        A_AE {
-            timeout-ms = <100>;
-            key-positions = <8 2>;
-            bindings = <&kp DE_ADIA>;
-        };
-        
-
-    };
-};
 
 //
 //
