@@ -224,6 +224,32 @@
             key-positions = <1 6>;
             bindings = <&mkp MB3>;
             };
+            //U oder Ü
+        A_AE {
+            timeout-ms = <500>;
+            key-positions = <1 2>;
+            bindings = <&kp DE_ADIA>;
+            };
+
+
+        U_UE {
+            timeout-ms = <500>;
+            key-positions = <1 2>;
+            bindings = <&kp DE_UDIA>;
+            };
+            //O oder Ö
+        O_OE {
+            timeout-ms = <500>;
+            key-positions = <9 2>;
+            bindings = <&kp DE_ODIA>;
+            };
+            //s oder ß
+        S_SS {
+            timeout-ms = <500>;
+            key-positions = <22 2>;
+            bindings = <&kp DE_SS>;
+            };
+
         };
 };
 
