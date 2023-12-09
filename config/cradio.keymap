@@ -203,55 +203,6 @@
 #define paste &c_V
 
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-        // A oder Ä
-        Click_L {
-            timeout-ms = <100>;
-            key-positions = <8 3>;
-            bindings = <&mkp MB1>;
-            };
-
-        Click_M {
-            timeout-ms = <100>;
-            key-positions = <7 2>;
-            bindings = <&mkp MB2>;
-            };
-
-        Click_R {
-            timeout-ms = <100>;
-            key-positions = <1 6>;
-            bindings = <&mkp MB3>;
-            };
-            //U oder Ü
-        A_AE {
-            timeout-ms = <500>;
-            key-positions = <1 2>;
-            bindings = <&kp DE_ADIA>;
-            };
-
-
-        U_UE {
-            timeout-ms = <500>;
-            key-positions = <1 2>;
-            bindings = <&kp DE_UDIA>;
-            };
-            //O oder Ö
-        O_OE {
-            timeout-ms = <500>;
-            key-positions = <9 2>;
-            bindings = <&kp DE_ODIA>;
-            };
-            //s oder ß
-        S_SS {
-            timeout-ms = <500>;
-            key-positions = <22 2>;
-            bindings = <&kp DE_SS>;
-            };
-
-        };
-};
 
 
 
@@ -311,7 +262,7 @@
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
 	          DE_K        DE_Y       DE_DOT   DE_QUOT      DE_X           DE_J       DE_V       DE_W       DE_B      DE_Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &mo NAV   OS_SHFT       &kp SPACE   &mo SYM
+                                              &mt NAV MB1   OS_SHFT       &kp SPACE   &mo SYM
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
             >;
