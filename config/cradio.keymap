@@ -262,7 +262,7 @@
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
 	          DE_K        DE_Y       DE_DOT   DE_QUOT      DE_X           DE_J       DE_V       DE_W       DE_B      DE_Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                              &mkp MB1 &lt NAV OS_SHFT       &lt SYM SPACE   &mkp MB3
+                                              &mt LSHIFT &mkp MB1  OS_SHFT       &lt SYM SPACE   &mkp MB3
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
             >;
