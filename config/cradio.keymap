@@ -232,7 +232,7 @@
       bindings = <&kp>, <&kp>;
     };
    ltmk: layer_tap_mouse_key {
-    label ="ht_layer_mousekey"
+    label ="ht_layer_mousekey";
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "tap-preferred";
