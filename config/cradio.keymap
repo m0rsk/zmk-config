@@ -232,7 +232,7 @@
       bindings = <&kp>, <&kp>;
     };
    ltmk: layer_tap_mouse_key {
-    label ="ht_layer_mousekey";
+    label ="layer_tap_mouse_key";
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "tap-preferred";
@@ -272,7 +272,7 @@
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
 	          DE_K        DE_Y       DE_DOT   DE_QUOT      DE_X           DE_J       DE_V       DE_W       DE_B      DE_Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &ltmk NAV MB1 OS_SHFT      &kp SPACE &ltmk SYM MB2
+                                           &ltmk 1 MB1 OS_SHFT      &kp SPACE &ltmk 2 MB2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
             >;
