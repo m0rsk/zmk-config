@@ -4,7 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/mouse.h>
+//#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/mouse_settings.h>
 #include "includes/mouse_keys.dtsi"
 
@@ -231,16 +231,16 @@
       global-quick-tap;
       bindings = <&kp>, <&kp>;
     };
-   ltmk: layer_tap_mouse_key {
-    label ="layer_tap_mouse_key";
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
-    require-prior-idle-ms = <125>;
-    bindings = <&mo>, <&mkp>;
-    }; 
+   //ltmk: layer_tap_mouse_key {
+    //label ="layer_tap_mouse_key";
+    //compatible = "zmk,behavior-hold-tap";
+    //#binding-cells = <2>;
+    //flavor = "tap-preferred";
+    //tapping-term-ms = <200>;
+    //quick-tap-ms = <200>;
+   // require-prior-idle-ms = <125>;
+    //bindings = <&mo>, <&mkp>;
+   // }; 
   };
 
   conditional_layers {
@@ -272,7 +272,7 @@
         //│          │          │          │          │          │   │          │          │     ²    │     ³    │          │
 	          DE_K        DE_Y       DE_DOT   DE_QUOT      DE_X           DE_J       DE_V       DE_W       DE_B      DE_Z
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &ltmk 1 MB1 OS_SHFT      &kp SPACE &ltmk 2 MB2
+                                           &lt 1         OS_SHFT       &kp SPACE  &lt 2 
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
 
             >;
